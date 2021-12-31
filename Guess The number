@@ -1,0 +1,39 @@
+#include<iostream>
+#define n 4 // The computer's number
+
+using namespace std;
+
+int main()
+{
+    int num,chances=10,i;
+    cout<<"\t\t<========== GUESS THE NUMBER GAME ==========>"<<endl;
+    for(i = 0 ; i<10 ; i++)
+    {
+        cout<<"Number of chances left ("<<chances<<")"<<endl;
+        cout<<"Enter the number"<<endl;
+        cin>>num;
+        if(num<n)
+        {
+            cout<<"The number is less than or smaller than computer's number"<<endl;
+        }
+        if(num>n)
+        {
+            cout<<"The number is greater or larger than computer's number"<<endl;
+        }
+        if(num == n)
+        {
+            cout<<"You win the game!!"<<endl;
+            break;
+        }
+        if(i == 9)
+        {
+            cout<<"0 chances left"<<endl;
+            cout<<"You lost the game"<<endl;
+            break;
+        }
+
+        chances--;
+    }
+    return 0;
+}
+// Program completed;
